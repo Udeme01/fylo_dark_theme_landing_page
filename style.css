@@ -1,0 +1,379 @@
+/* CSS Custom Variables */
+:root {
+    /* design widths */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+
+    /* primary colors */
+    --Dark-Blue-intro-bg: hsl(217, 28%, 15%);
+    --Dark-Blue-Intro-email_sign_up-bg: hsl(217, 28%, 15%);
+    --Dark-Blue-main-bg: hsl(218, 28%, 13%);
+    --Dark-Blue-footer-bg: hsl(216, 53%, 9%);
+    --Dark-Blue-testimonials-bg: hsl(219, 30%, 18%);
+
+    /* accent colors */
+    --Cyan_Accent-inside-call-to-action-gradient: hsl(176, 68%, 64%);
+    --Blue_Accent-inside-call-to-action-gradient: hsl(198, 60%, 50%);
+    --Light_Red_Accent-error: hsl(0, 100%, 63%);
+
+    /* neutral colors */
+    --neutral_white: hsl(0, 0%, 100%);
+
+    /* font-size */
+    --fs_body: 14px;
+
+    /* Headings, Call-to-actions, Header Navigation */
+    --ff_headings_cta_nav: 'Raleway', sans-serif;
+    --fw_headings_cta_nav_regular: 400;
+    --fw_headings_cta_nav_bold: 700;
+
+    /* body */
+    --ff-body: 'Open Sans', sans-serif;
+    --fw_body_regular: 400;
+    --fw_body_bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: var(--ff-body);
+    font-size: var(--fs_body);
+    background-color: var(--Dark-Blue-main-bg);
+    color: var(--neutral_white);
+}
+
+/* Typography */
+h2,
+h3,
+h4,
+.nav__wrapper,
+.cta_btn {
+    font-family: var(--ff_headings_cta_nav);
+    font-weight: var(--fw_headings_cta_nav_bold);
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--neutral_white);
+}
+
+.main__wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header styles */
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 18px;
+    background-color: var(--Dark-Blue-intro-bg);
+}
+
+.logo {
+    width: 75px;
+    height: 23px;
+}
+
+/* nav styles */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav :not(:last-child) {
+    padding-right: 22px;
+}
+
+/* hero section styles */
+
+.illustration-intro__wrapper {
+    background: var(--Dark-Blue-Intro-email_sign_up-bg) url(images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.illustration-intro-image {
+    width: 274px;
+    height: 199px;
+}
+
+.illustration-intro__wrapper h2 {
+    /* width: 276px; */
+    padding: 0 32px;
+    min-height: 41px;
+    margin-top: 41px;
+}
+
+.illustration-intro__wrapper p {
+    /* width: 266px; */
+    padding: 0 36px;
+    min-height: 72px;
+    margin-top: 20px;
+}
+
+.cta_btn {
+    background: linear-gradient(to right, var(--Cyan_Accent-inside-call-to-action-gradient), var(--Blue_Accent-inside-call-to-action-gradient));
+    width: 219px;
+    line-height: 44px;
+    border-radius: 50px;
+    margin-top: 28px;
+}
+
+/* features styles */
+
+.features {
+    text-align: center;
+    margin-top: 117px;
+}
+
+.feature {
+    margin-bottom: 89px;
+    line-height: 1.6;
+    padding: 0 35px;
+}
+
+.feature img {
+    margin-bottom: 33px;
+}
+
+.feature h3 {
+    margin-bottom: 11px;
+}
+
+.feature:nth-child(4) {
+    margin-bottom: 0;
+}
+
+/* stay productive styles */
+
+.productive {
+    text-align: center;
+}
+
+.img-box {
+    margin-top: 147px;
+    margin-bottom: 49px;
+}
+
+.img-box img {
+    width: 273px;
+}
+
+.productive__desc {
+    text-align: left;
+    padding: 0 29px;
+}
+
+.productive__desc h3, p {
+    margin-bottom: 20px;
+}
+
+.productive__desc p {
+    line-height: 1.5;
+}
+
+.productive__link {
+    border-bottom: 2px solid var(--Cyan_Accent-inside-call-to-action-gradient);
+    padding-bottom: 4px;
+}
+
+.productive__link span {
+    color: var(--Cyan_Accent-inside-call-to-action-gradient);
+}
+
+/* profile card styles */
+.profile__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: 150px;
+}
+
+.card {
+    width: 65%;
+    background-color: var(--Dark-Blue-testimonials-bg);
+    padding: 27px 28px 20px 17px;
+    border-radius: 6px;
+    margin-bottom: 22px;
+}
+
+.card__position {
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+}
+
+.card__position img {
+    width: 25px;
+    border-radius: 50%;
+}
+
+.card__position span {
+    margin-left: 6px;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.card__position span p {
+    font-size: 8px;
+}
+
+.card p {
+    margin: 0;
+}
+
+/* get access styles */
+
+.get__access {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 122px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+}
+
+.early__access {
+    text-align: center;
+    background-color: var(--Dark-Blue-Intro-email_sign_up-bg);
+    padding: 40px 24px 30px;
+    border-radius: 12px;
+}
+
+.early__access h3 {
+    font-size: 17px;
+}
+
+.early__access p {
+    margin-bottom: 0;
+    line-height: 1.5;
+    margin-top: 23px;
+}
+
+.email__access {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email__access input {
+    border: none;
+    outline: none;
+    background: none;
+    background-color: var(--neutral_white);
+    width: 254px;
+    padding: 15px 0px 15px 26px;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+.access_btn {
+    width: 254px;
+    margin-top: 21px; 
+    padding: 4px 12px;
+}
+
+/* footer styles */
+
+.footer {
+    background-color: var(--Dark-Blue-footer-bg);
+    padding-top: 225px;
+    padding-left: 24px;
+    margin-top: 300px;
+}
+
+/* location styles(foot child 1) */
+.foot__1 > img {
+    margin-left: 35px;
+}
+
+.location {
+    display: flex;
+    margin-top: 39px;
+}
+
+.location img {
+    margin-top: 2px;
+}
+
+.location p {
+    margin-left: 25px;
+    margin-right: 29px;
+    line-height: 1.5;
+}
+
+/* phone & mail style(foot child 2) */
+.phone,
+.mail {
+    display: flex;
+}
+
+.phone p,
+.mail p {
+    margin-left: 20px;
+}
+
+.mail p {
+    margin-bottom: 0;
+}
+
+/* footer link styles(group 1) & group 2 footer link styles */
+
+.group_1__link {
+    margin-top: 79px;
+}
+
+.group_2__link {
+    margin-top: 45px;
+}
+
+.footer__link ul li:not(:last-child),
+.footer_extra__link ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* footer icon styles */
+
+.footer__icon {
+    margin-top: 70px;
+    padding-bottom: 38px;
+    text-align: center;
+}
+
+.footer__icon span:not(:last-child) {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
