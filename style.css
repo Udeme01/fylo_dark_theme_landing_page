@@ -203,6 +203,11 @@ a {
     color: var(--Cyan_Accent-inside-call-to-action-gradient);
 }
 
+.productive__link img {
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+
 /* profile card styles */
 .profile__cards {
     display: flex;
@@ -219,6 +224,19 @@ a {
     padding: 27px 28px 20px 17px;
     border-radius: 6px;
     margin-bottom: 22px;
+}
+
+.card_1 {
+    position: relative;
+}
+
+.card_1::before {
+    content: url("images/bg-quotes.png");
+    display: block;
+    position: absolute;
+    top: -36px;
+    z-index: -1;
+    /* background: url("images/bg-quotes.png"); */
 }
 
 .card__position {
